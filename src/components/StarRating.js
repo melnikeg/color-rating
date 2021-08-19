@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Star from './Star';
+import s from './Color.module.css'
 
 class StarRating extends Component {
     constructor(props) {
@@ -10,23 +11,31 @@ class StarRating extends Component {
         this.change = this.change.bind(this)
     }
     change(starsSelected) {
-        this.setState({starsSelected})
+        this.setState({ starsSelected })
     }
     render() {
-        const {totalStars} = this.props
-        const {starsSelected} = this.state
+        const { totalStars } = this.props
+        const { starsSelected } = this.state
         return (
             <div>
-                {[...Array(totalStars)].map((n, i) =>
-                    <Star   key={i}
-                            selected={i<starsSelected}
-                            onClick={() => this.change(i+1)}
-                    />
-                )}
-                <p>{starsSelected} of {totalStars}</p>
+                <div>
+                    {[...Array(totalStars)].map((n, i) =>
+                        <Star key={i}
+                            selected={i < starsSelected}
+                            onClick={() => this.change(i + 1)}
+                        />
+                    )}
+                </div>
+                <div>
+                    {starsSelected} of {totalStars}
+                </div>
             </div>
         )
     }
+}
+
+StarRating.defaultProps = {
+    totalStars: 5
 }
 
 export default StarRating;
