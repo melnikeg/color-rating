@@ -17,7 +17,7 @@ class StarRating extends Component {
         const { totalStars } = this.props
         const { starsSelected } = this.state
         return (
-            <div>
+            <div className={s.box2}>
                 <div>
                     {[...Array(totalStars)].map((n, i) =>
                         <Star key={i}
@@ -26,7 +26,7 @@ class StarRating extends Component {
                         />
                     )}
                 </div>
-                <div>
+                <div className={s.box3}>
                     {starsSelected} of {totalStars}
                 </div>
             </div>

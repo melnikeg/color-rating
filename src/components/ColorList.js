@@ -1,4 +1,5 @@
 import Color from "./Color";
+import s from "./Color.module.css"
 
 const ColorList = ({ colors=[], onRate=f=>f, onRemove=f=>f }) =>
     <div>
