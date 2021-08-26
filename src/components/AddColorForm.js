@@ -1,3 +1,5 @@
+import s from './AddColorForm.module.css'
+
 const AddColorForm = ({ onNewColor = f => f }) => {
 
 	let _title, _color
@@ -11,13 +13,15 @@ const AddColorForm = ({ onNewColor = f => f }) => {
 	}
 
 	return (
-		<form onSubmit={submit}>
-			<input ref={input => _title = input}
+		<form className={s.form} onSubmit={submit}>
+			<input className={s.box} 
+				ref={input => _title = input}
 				type="text"
 				placeholder="color title..." required />
-			<input ref={input => _color = input}
+			<input className={s.box}
+				ref={input => _color = input}
 				type="color" required />
-			<button>ADD</button>
+			<button className={s.box}>ADD</button>
 		</form>
 	)
 }

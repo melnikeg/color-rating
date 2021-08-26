@@ -1,25 +1,23 @@
-.color {    
-    display: grid;                           
-    grid-template-columns: 220px 30px;
-    grid-template-rows: 1fr 2fr;
-    border-width: 2px;
-    border-color: rgb(0, 0, 0);   
-    border-style: dashed;  
+.mainBox {
+    display: flex;
+    flex-wrap: wrap;   
 }
+
+.box {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 300px;    
+  }
 
 .box1 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.box2 {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    margin-left: auto;
-    margin-right: auto;
+    height: 150px;
+    width: 300px;    
 }
 
 .box3 {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }

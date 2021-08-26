@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import Star from './Star';
-import s from './Color.module.css'
 
 class StarRating extends Component {
     constructor(props) {
@@ -17,7 +16,7 @@ class StarRating extends Component {
         const { totalStars } = this.props
         const { starsSelected } = this.state
         return (
-            <div className={s.box2}>
+            <div>
                 <div>
                     {[...Array(totalStars)].map((n, i) =>
                         <Star key={i}
@@ -26,7 +25,7 @@ class StarRating extends Component {
                         />
                     )}
                 </div>
-                <div className={s.box3}>
+                <div>
                     {starsSelected} of {totalStars}
                 </div>
             </div>
