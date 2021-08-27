@@ -19,6 +19,6 @@
     );
 }
 
-.star .selected {
-    background-color: red;
+.starSelected {
+    background-color: red; 
 }
